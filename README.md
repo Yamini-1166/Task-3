@@ -1,146 +1,49 @@
 # Task-3
- /* <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enhanced To-Do List</title>
-    <style>
-        /* Enhanced CSS Styling */
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(to bottom, #e0f7fa, #e8f5e9);
-            margin: 0;
-            padding: 0;
-        }
-        .app {
-            text-align: center;
-            margin: 50px auto;
-            max-width: 600px;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            padding: 20px;
-        }
-        h1 {
-            color: #26a69a;
-            margin-bottom: 20px;
-        }
-        .input-container {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-        input {
-            padding: 10px;
-            width: 70%;
-            border: 2px solid #ddd;
-            border-radius: 5px;
-            margin-right: 10px;
-            font-size: 16px;
-        }
-        input:focus {
-            border-color: #26a69a;
-            outline: none;
-        }
-        button {
-            padding: 10px 20px;
-            background-color: #26a69a;
-            color: white;
-            font-size: 16px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-        button:hover {
-            background-color: #2bbbad;
-        }
-        #todo-list {
-            list-style: none;
-            padding: 0;
-        }
-        .todo-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-            background-color: #f9f9f9;
-            border-radius: 5px;
-            margin-bottom: 10px;
-            transition: background 0.3s ease;
-        }
-        .todo-item.completed {
-            background-color: #dcedc8;
-            text-decoration: line-through;
-            color: #757575;
-        }
-        .todo-item button {
-            padding: 5px 10px;
-            border: none;
-            background-color: #ef5350;
-            color: white;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .todo-item button:hover {
-            background-color: #e53935;
-        }
-    </style>
-</head>
-<body>
-    <div class="app">
-        <h1>Enhanced To-Do List</h1>
-        <div class="input-container">
-            <input type="text" id="todo-input" placeholder="Add a new task" required>
-            <button onclick="addTodo()">Add</button>
-        </div>
-        <ul id="todo-list"></ul>
-    </div>
-    <script>
-        // Enhanced JavaScript for Real-Time To-Do List
-        let todos = [];
+ # Enhanced To-Do List
 
-        function addTodo() {
-            const input = document.getElementById("todo-input");
-            const todoText = input.value.trim();
-            if (todoText) {
-                const newTodo = {
-                    id: Date.now(),
-                    text: todoText,
-                    completed: false
-                };
-                todos.push(newTodo);
-                input.value = '';
-                renderTodos();
-            }
-        }
+Enhanced To-Do List is a sleek, interactive task management app built using HTML, CSS, and JavaScript. Designed with a modern UI and dynamic functionality, this project helps users add, mark, and remove tasks easily—making productivity feel effortless.
 
-        function toggleComplete(id) {
-            todos = todos.map(todo => 
-                todo.id === id ? { ...todo, completed: !todo.completed } : todo
-            );
-            renderTodos();
-        }
+### Features
 
-        function removeTodo(id) {
-            todos = todos.filter(todo => todo.id !== id);
-            renderTodos();
-        }
+Beautiful and responsive interface with calming colors
 
-        function renderTodos() {
-            const todoList = document.getElementById("todo-list");
-            todoList.innerHTML = '';
-            todos.forEach(todo => {
-                const li = document.createElement("li");
-                li.className = `todo-item ${todo.completed ? 'completed' : ''}`;
-                li.innerHTML = `
-                    <span onclick="toggleComplete(${todo.id})">${todo.text}</span>
-                    <button onclick="removeTodo(${todo.id})">Remove</button>
-                `;
-                todoList.appendChild(li);
-            });
-        }
-    </script>
-</body>
-</html>
+Add, complete, and remove tasks with a single click
+
+Real-time updates without page refresh
+
+Completed tasks shown with a strikethrough and background highlight
+
+Smooth transitions and interactive feedback
+
+
+### Technologies Used
+
+HTML5
+
+CSS3 (for stylish layout and responsive design)
+
+Vanilla JavaScript (for interactivity and task management)
+
+
+### How to Use
+
+1. Clone or download this repository.
+
+
+2. Open the index.html file in your browser.
+
+
+3. Type a task in the input field and click Add.
+
+
+4. Click on a task to mark it as complete.
+
+
+5. Click Remove to delete the task.
+
+
+
+### Preview
+
+> “Stay organized with a touch of style!”
+
